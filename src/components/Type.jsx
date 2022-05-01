@@ -8,6 +8,7 @@ const TypeComponent = styled.div`
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     color: #828282;
+    align-items: center;
 `
 
 const Type = ({superhost, type}) => {

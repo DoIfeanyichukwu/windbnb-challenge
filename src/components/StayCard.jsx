@@ -6,14 +6,14 @@ import { StayCardTitle } from './StayCardTitle'
 
 
 
-const StayCard = ({superhost, type, rating, photo, title}) => {
+const StayCard = ({superHost, type, rating, photo, title}) => {
   return (
       <article className="staycard">
-          <StayCardImageContainer>
-              <img src={photo} alt="" className="staycard_image" />
+          <StayCardImageContainer className='staycard_image_container'>
+              <img src={photo} alt="" className="staycard_image" loading='lazy' />
           </StayCardImageContainer>
 
-          <ApartmentType superhost={superhost} type={type} rating={rating} />
+          <ApartmentType superhost={superHost} type={type} rating={rating} />
 
           <StayCardTitle>
               {title}

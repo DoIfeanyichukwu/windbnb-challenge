@@ -4,6 +4,7 @@ import StayCard from '../components/StayCard'
 
 const MainElement = styled.main`
     font-family: "Montserrat", sans-serif;
+    margin-block-end: 101px;
 
     & .main_header {
         display: flex;
@@ -27,24 +28,34 @@ const MainElement = styled.main`
 `
 
 const Main = ({number, data}) => {
-  return (
-      <MainElement className="main">
-          <header className="main_header">
-              <h1 className="main_header_text">
-                  Stays in Finland
-              </h1>
-              <p className="main_header_side">
-                  {number}+ stays
-              </p>
-          </header>
+    const data_map = data.map(obj => {
+        return <StayCard
+                    key={obj.title}
+                    superHost={obj.superHost}
+                    type={obj.type}
+                    rating={obj.rating}
+                    photo={obj.photo}
+                    title={obj.title}
+                 />
+    })
 
-          <div className="main_grid_container">
-              {
-                  console.log(data)
-              }
-          </div>
-      </MainElement>
-  )
+
+    return (
+        <MainElement className="main">
+            <header className="main_header">
+                <h1 className="main_header_text">
+                    Stays in Finland
+                </h1>
+                <p className="main_header_side">
+                    {number}+ stays
+                </p>
+            </header>
+
+            <div className="main_grid_container">
+                {data_map}
+            </div>
+        </MainElement>
+    )
 }
 
 export default Main

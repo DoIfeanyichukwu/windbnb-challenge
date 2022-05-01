@@ -6,6 +6,8 @@ import Rate from './Rating'
 const Apartment_Type = styled.div`
     display: flex;
     gap: 41px;
+    align-items: center;
+    justify-content: space-between;
 `
 
 const ApartmentType = ({superhost, type, rating}) => {

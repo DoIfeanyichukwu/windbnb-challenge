@@ -6,6 +6,8 @@ const StayCardImageContainer = styled.div`
     }
 
     border-radius: 24px;
+    margin-block-end: 13.29px;
+    overflow: hidden;
 `
 
 export {StayCardImageContainer}
