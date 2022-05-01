@@ -14,6 +14,9 @@ img{
   block-size: auto;
 }
 
+a {
+  display: block;
+}
 
 .header_button_icon {
   width: 32px;

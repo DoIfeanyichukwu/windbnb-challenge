@@ -4,9 +4,6 @@ import logo from '../img/logo.svg'
 
 import HeaderButton from '../components/HeaderButton'
 
-const LogoContainer = styled.div`
-
-`
 const HeaderElement = styled.header`
   font-family: "Mulish", sans-serif;
   line-height: 17.57px;
@@ -19,11 +16,11 @@ const HeaderElement = styled.header`
 const Header = (props) => {
   return (
     <HeaderElement className="header">
-      <LogoContainer className='logo_container'>
+      <div className='logo_container'>
         <a href="/" aria-label='windbnd, back to home' className="logo_link">
           <img src={logo} alt="" />
         </a>
-      </LogoContainer>
+      </div>
 
       <HeaderButton place={"Helsinki, Finland"} guest={0} />
     </HeaderElement>
