@@ -6,7 +6,7 @@
       "title": "Stylist apartment in center of the city",
       "rating": 4.4,
       "maxGuests": 3,
-      "type": "Entire apartment",
+      "type": "Entire apartment. 2 beds",
       "beds": 2,
       "photo": "https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2255&q=80"
     },
@@ -17,7 +17,7 @@
       "title": "Nice apartment in center of Helsinki",
       "rating": 4.2,
       "maxGuests": 5,
-      "type": "Entire apartment",
+      "type": "Entire apartment. 3 beds",
       "beds": 3,
       "photo": "https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80"
     },
