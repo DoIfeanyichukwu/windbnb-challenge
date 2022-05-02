@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import StayCard from '../components/StayCard'
+import StayCard from '../components/StayCard/StayCard'
 
 const MainElement = styled.main`
     font-family: "Montserrat", sans-serif;

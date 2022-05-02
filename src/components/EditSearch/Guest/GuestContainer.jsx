@@ -16,9 +16,9 @@ const GuestContainer = (props) => {
                 </GuestDesc>
             </label>
             <GuestForm>
-                <GuestBtn>-</GuestBtn>
+                <GuestBtn aria-label='minus guest by 1'>-</GuestBtn>
                 <input type="number" name="adults" disabled id="adults" />
-                <GuestBtn>+</GuestBtn>
+                <GuestBtn aria-label='add one guest'>+</GuestBtn>
             </GuestForm>
         </div>
 
@@ -32,9 +32,9 @@ const GuestContainer = (props) => {
                 </GuestDesc>
             </label>
             <GuestForm>
-                <GuestBtn>-</GuestBtn>
+                <GuestBtn  aria-label='minus guest by 1'>-</GuestBtn>
                 <input type="number" name="children" disabled id="children" />
-                <GuestBtn>+</GuestBtn>
+                <GuestBtn aria-label='add one guest'>+</GuestBtn>
             </GuestForm>
         </div>
     </div>

@@ -57,6 +57,16 @@ a {
   display: inline;
 }
 
+.edit_search_btn_icon {
+  color: inherit;
+  width: 32px;
+  height: 32px;
+}
+
+.edit_search_sub {
+  position: relative;
+}
+
 @media (min-width: 700px) {
   .app {
     margin-inline: 94px 96px;
