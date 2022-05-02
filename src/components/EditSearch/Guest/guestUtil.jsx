@@ -25,6 +25,8 @@ const GuestBtn = styled.button`
     color: #828282;
     padding-block: 7.33px;
     padding-inline: 6.33px;
+    // width: 23px;
+    // height: 23px;
 `
 
 const GuestForm = styled.div`
@@ -34,5 +36,6 @@ const GuestForm = styled.div`
 export {
     GuestType,
     GuestDesc,
-    GuestBtn
+    GuestBtn,
+    GuestForm
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import { GuestType, GuestDesc, GuestBtn, GuestForm } from './guestUtil'
+import { MdAdd, MdRemove } from 'react-icons/md'
 
 
 
@@ -16,9 +17,9 @@ const GuestContainer = (props) => {
                 </GuestDesc>
             </label>
             <GuestForm>
-                <GuestBtn aria-label='minus guest by 1'>-</GuestBtn>
-                <input type="number" name="adults" disabled id="adults" />
-                <GuestBtn aria-label='add one guest'>+</GuestBtn>
+                <GuestBtn aria-label='minus guest by 1'><MdRemove className='sign_icon'/></GuestBtn>
+                <input type="number" name="adults" defaultValue={0} disabled id="adults" />
+                <GuestBtn aria-label='add one guest'><MdAdd className='sign_icon'/></GuestBtn>
             </GuestForm>
         </div>
 
@@ -32,9 +33,9 @@ const GuestContainer = (props) => {
                 </GuestDesc>
             </label>
             <GuestForm>
-                <GuestBtn  aria-label='minus guest by 1'>-</GuestBtn>
-                <input type="number" name="children" disabled id="children" />
-                <GuestBtn aria-label='add one guest'>+</GuestBtn>
+                <GuestBtn  aria-label='minus guest by 1'><MdRemove className='sign_icon'/></GuestBtn>
+                <input type="number" name="children" disabled defaultValue={0} id="children" />
+                <GuestBtn aria-label='add one guest'><MdAdd className='sign_icon'/></GuestBtn>
             </GuestForm>
         </div>
     </div>

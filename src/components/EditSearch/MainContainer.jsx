@@ -12,10 +12,13 @@ const LABEL = styled.label`
   text-transform: uppercase;
   display: block;
   line-height: 11px;
+  top: 11px;
+  left: 26px;
 `
 
 const INPUT = styled.input`
   max-inline-size: 100%;
+  width: 100%;
   font-weight: 400;
   font-family: "Mulish", sans-serif;
   font-size: 14px;
@@ -24,6 +27,7 @@ const INPUT = styled.input`
   padding-inline: 26px;
   background: #fff; 
   line-height: 17px;
+  border: none;
 
   &::placeholder {
     color: #bdbdbd;
@@ -47,7 +51,10 @@ const MainContainer = (props) => {
           <LABEL htmlFor='guests'>guests</LABEL>
           <INPUT type="text" id='guests' placeholder='Add guests' />
         </div>
+
       </div>
+
+
       <div className="edit_search_btn">
         <SearchButton>
           <MdSearch className='edit_search_btn_icon'/>
