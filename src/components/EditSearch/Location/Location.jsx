@@ -6,6 +6,16 @@ const LI = styled.li`
     display: flex;
     gap: 10px;
     align-items: center;
+    font-family: "Mulish", sans-serif;
+    color: #4f4f4f;
+    font-weight: 400;
+    line-height: 17.57px;
+
+    & .location_icon {
+        color: inherit;
+        width: 24px;
+        height: 24px;
+    }
 `
 
 const Location = ({city}) => {

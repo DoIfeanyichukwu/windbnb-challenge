@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import MainContainer from './MainContainer'
 import { MdClear } from 'react-icons/md'
 import LocationContainer from './Location/LocationContainer'
+import Location from './Location/Location'
 import GuestContainer from './Guest/GuestContainer'
 
 const EditSearchComponent = styled.div`
@@ -46,7 +47,10 @@ const EditSearch = (props) => {
 
           <div className="edit_search_aside">
                 <LocationContainer>
-                    
+                    <Location city={"Helsinki, Finland"} />
+                    <Location city={"Turku, Finland"} />
+                    <Location city={"Oulu, Finland"} />
+                    <Location city={"Vaasa, Finland"} />
                 </LocationContainer>
 
                 <GuestContainer />

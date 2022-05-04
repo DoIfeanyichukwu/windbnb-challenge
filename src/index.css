@@ -115,6 +115,15 @@ div.edit_search_pseudo_nav {
 
 .edit_search_aside {
   margin-block-end: 181px;
+  margin-inline-start: 26px;
+}
+
+.location_item + .location_item {
+  margin-block-start: 34.53px;
+}
+
+.guest_section + .guest_section {
+  margin-block-start: 52px;
 }
 
 @media (min-width: 700px) {

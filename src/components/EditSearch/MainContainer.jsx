@@ -43,13 +43,13 @@ const MainContainer = (props) => {
     <div className='edit_search_main'>
       <div className="edit_search_main_inputs">
         <div className="edit_search_main_location edit_search_sub">
-          <LABEL htmlFor="location">location</LABEL>
-          <INPUT type="text" id="location" defaultValue={"Helsinki, Finland"} />
+          <LABEL htmlFor="location_input">location</LABEL>
+          <INPUT type="text" id="location_input" defaultValue={"Helsinki, Finland"} />
         </div>
 
         <div className="edit_search_main_guest edit_search_sub">
-          <LABEL htmlFor='guests'>guests</LABEL>
-          <INPUT type="text" id='guests' placeholder='Add guests' />
+          <LABEL htmlFor='guests_input'>guests</LABEL>
+          <INPUT type="text" id='guests_input' placeholder='Add guests' />
         </div>
 
       </div>

@@ -7,7 +7,7 @@ const UL = styled.ul`
 
 const LocationContainer = (props) => {
   return (
-      <UL className='location_container'>
+      <UL className='location_container' id='location_container'>
           {props.children}
       </UL>
   )

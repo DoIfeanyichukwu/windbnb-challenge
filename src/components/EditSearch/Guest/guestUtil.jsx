@@ -7,6 +7,7 @@ const GuestType = styled.span`
     line-height: 18px;
     color: #333333;
     display: block;
+    margin-block-end: .4rem;
 `
 
 const GuestDesc = styled.span`
@@ -16,6 +17,7 @@ const GuestDesc = styled.span`
     line-height: 18px;
     color: #bdbdbd;
     display: block;
+    margin-block-end: 12px;
 `
 
 const GuestBtn = styled.button`
