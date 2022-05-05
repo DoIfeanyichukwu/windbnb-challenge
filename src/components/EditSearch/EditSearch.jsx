@@ -17,6 +17,11 @@ const EditSearchComponent = styled.div`
     & * {
         max-inline-size: 100%;
     }
+
+    @media (min-width: 1440px) {
+        max-width: 1440px;
+        margin: auto;
+    }
 `
 
 const P = styled.p`

@@ -28,6 +28,14 @@ const INPUT = styled.input`
   background: #fff; 
   line-height: 17px;
   border: none;
+  height: 100%;
+
+  @media (min-width: 1024px) {
+    &:focus {
+      border: 1px solid #333333;
+      border-radius: 1rem;
+    }
+  }
 
   &::placeholder {
     color: #bdbdbd;
@@ -44,12 +52,12 @@ const MainContainer = (props) => {
       <div className="edit_search_main_inputs">
         <div className="edit_search_main_location edit_search_sub">
           <LABEL htmlFor="location_input">location</LABEL>
-          <INPUT type="text" id="location_input" defaultValue={"Helsinki, Finland"} />
+          <INPUT type="text" className='location_input' id="location_input" defaultValue={"Helsinki, Finland"} />
         </div>
 
         <div className="edit_search_main_guest edit_search_sub">
           <LABEL htmlFor='guests_input'>guests</LABEL>
-          <INPUT type="text" id='guests_input' placeholder='Add guests' />
+          <INPUT type="text" className='guest_input' id='guests_input' placeholder='Add guests' />
         </div>
 
       </div>

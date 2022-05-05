@@ -27,6 +27,7 @@ const GuestBtn = styled.button`
     color: #828282;
     padding-block: 7.33px;
     padding-inline: 6.33px;
+    cursor: pointer;
     // width: 23px;
     // height: 23px;
 `
