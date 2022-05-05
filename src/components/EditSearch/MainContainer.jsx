@@ -52,7 +52,7 @@ const MainContainer = (props) => {
       <div className="edit_search_main_inputs">
         <div className="edit_search_main_location edit_search_sub">
           <LABEL htmlFor="location_input">location</LABEL>
-          <INPUT type="text" className='location_input' id="location_input" defaultValue={"Helsinki, Finland"} />
+          <INPUT type="text" autoFocus className='location_input' id="location_input" defaultValue={"Helsinki, Finland"} />
         </div>
 
         <div className="edit_search_main_guest edit_search_sub">

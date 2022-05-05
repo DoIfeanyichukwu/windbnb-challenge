@@ -12,7 +12,10 @@ export default class App extends Component {
   render() {
     return (
       <div className="app">
-        <EditSearch />
+        <div className='edit_search_container'>
+          <EditSearch />
+          <div className="shade"></div>
+        </div>
         <Header />
         <Main number={12} data={data}/>
         <Footer />
