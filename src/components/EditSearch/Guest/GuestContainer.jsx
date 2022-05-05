@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 const INPUT = styled.input`
     border: none;
-    padding-inline: 1rem;
+    padding-inline-start: 1rem;
     font-family: "Mulish", sans-serif;
     font-weight: 700;
     font-size: 14px;

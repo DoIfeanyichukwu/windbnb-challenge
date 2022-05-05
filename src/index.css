@@ -139,11 +139,10 @@ div.edit_search_pseudo_nav {
     margin-inline-end: auto;
     width: 80%;
     align-items: stretch;
-    /* gap: .5rem; */
   }
 
   .edit_search {
-    padding-block: 93px 89.53px;
+    padding-block: 93px 60px;
   }
 
   .edit_search_aside {
