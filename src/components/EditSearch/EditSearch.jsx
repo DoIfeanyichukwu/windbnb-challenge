@@ -6,9 +6,26 @@ import LocationContainer from './Location/LocationContainer'
 import Location from './Location/Location'
 import GuestContainer from './Guest/GuestContainer'
 
-const EditSearchComponent = styled.div`
+const Container = styled.div`
     position: fixed;
     background-color: #fff;
+    max-inline-size: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+
+    &::after {
+        content: " ";
+        background-color: rgba(0, 0, 0, 0.3);
+        height: 100vh;
+        position: absolute;
+        width: 100vw;
+        backdrop-filter: blur(5px);
+    }
+`
+
+const EditSearchComponent = styled.div`
     max-inline-size: 100%;
     right: 0;
     left: 0;
@@ -38,29 +55,35 @@ const CLOSE = styled.button`
     color: #333333;
 `
 
+
+
 const EditSearch = (props) => {
   return (
-      <EditSearchComponent className="edit_search">
-          <div className="edit_search_pseudo_nav">
-              <P>Edit your search</P>
-              <CLOSE aria-label='close button for small screens'> 
-                <MdClear className='close_icon'/>
-              </CLOSE>
-          </div>
+    <Container className='edit_search_container'>
 
-          <MainContainer />
+        <EditSearchComponent className="edit_search">
+            <div className="edit_search_pseudo_nav">
+                <P>Edit your search</P>
+                <CLOSE 
+                aria-label='close button for small screens'> 
+                    <MdClear className='close_icon'/>
+                </CLOSE>
+            </div>
 
-          <div className="edit_search_aside">
-                <LocationContainer>
-                    <Location city={"Helsinki, Finland"} />
-                    <Location city={"Turku, Finland"} />
-                    <Location city={"Oulu, Finland"} />
-                    <Location city={"Vaasa, Finland"} />
-                </LocationContainer>
+            <MainContainer />
 
-                <GuestContainer />
-          </div>
-      </EditSearchComponent>
+            <div className="edit_search_aside">
+                    <LocationContainer>
+                        <Location city={"Helsinki, Finland"} />
+                        <Location city={"Turku, Finland"} />
+                        <Location city={"Oulu, Finland"} />
+                        <Location city={"Vaasa, Finland"} />
+                    </LocationContainer>
+
+                    <GuestContainer />
+            </div>
+        </EditSearchComponent>
+    </Container>
   )
 }
 
