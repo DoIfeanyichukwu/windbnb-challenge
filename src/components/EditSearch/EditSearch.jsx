@@ -26,14 +26,6 @@ const Container = styled.div`
 `
 
 const EditSearchComponent = styled.div`
-    max-inline-size: 100%;
-    right: 0;
-    left: 0;
-    top: 0;
-
-    & * {
-        max-inline-size: 100%;
-    }
 
     @media (min-width: 1440px) {
         max-width: 1440px;
