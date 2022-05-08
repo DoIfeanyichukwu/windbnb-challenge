@@ -33,7 +33,9 @@ a {
   justify-content: center;
 }
 
-
+.staycard {
+  transition: transform .3s;
+}
 .staycard + .staycard {
   margin-block-start: 32px;
 }
@@ -139,6 +141,13 @@ div.edit_search_pseudo_nav {
 }
 
 @media (min-width: 700px) {
+
+  .staycard:hover {
+    transform: scale(1.05);
+    transition: transform .3s;
+    cursor: pointer;
+  }
+
   div.edit_search_pseudo_nav {
     display: none;
   }
