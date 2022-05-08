@@ -116,6 +116,18 @@ div.edit_search_pseudo_nav {
 .edit_search_aside {
   margin-block-end: 181px;
   margin-inline-start: 26px;
+  position: relative;
+}
+
+.guest_container {
+  position: absolute;
+  top: 0;
+}
+
+.visibility_hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s;
 }
 
 .location_item + .location_item {

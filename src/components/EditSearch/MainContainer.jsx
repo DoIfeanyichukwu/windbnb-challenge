@@ -46,6 +46,27 @@ const INPUT = styled.input`
   }
 `
 
+
+const onGuestFocused = (event) => {
+  event.preventDefault();
+
+  const guest_container = document.querySelector('.guest_container');
+  const location_container = document.querySelector('.location_container');
+
+  guest_container.classList.remove('visibility_hidden');
+  location_container.classList.add('visibility_hidden');
+}
+
+const onLocationFocused = (event) => {
+  event.preventDefault();
+
+  const guest_container = document.querySelector('.guest_container');
+  const location_container = document.querySelector('.location_container');
+
+  guest_container.classList.add('visibility_hidden');
+  location_container.classList.remove('visibility_hidden');
+}
+
 const MainContainer = (props) => {
   return (
     <div className='edit_search_main'>
@@ -58,6 +79,7 @@ const MainContainer = (props) => {
             id="location_input" 
             defaultValue={"Helsinki, Finland"} 
             autoComplete="city"
+            onFocus={onLocationFocused}
           />
         </div>
 
@@ -68,6 +90,7 @@ const MainContainer = (props) => {
             className='guest_input' 
             id='guests_input' 
             placeholder='Add guests' 
+            onFocus={onGuestFocused}
           />
         </div>
 

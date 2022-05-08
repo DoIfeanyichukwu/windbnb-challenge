@@ -16,7 +16,7 @@ const INPUT = styled.input`
 
 const GuestContainer = (props) => {
   return (
-    <div className='guest_container' id='guest_container'>
+    <div className='guest_container visibility_hidden' id='guest_container'>
         <div className="guest_section">
             <label htmlFor="adults">
                 <GuestType>
