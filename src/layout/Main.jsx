@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import StayCard from '../components/StayCard/StayCard'
+import NotFound from '../components/NotFound'
 
 const MainElement = styled.main`
     font-family: "Montserrat", sans-serif;
@@ -27,7 +28,7 @@ const MainElement = styled.main`
 
 `
 
-const Main = ({number, data}) => {
+const Main = ({data, number}) => {
     const data_map = data.map(obj => {
         return <StayCard
                     key={obj.title}
@@ -38,6 +39,13 @@ const Main = ({number, data}) => {
                     title={obj.title}
                  />
     })
+
+    if (number > 0)
+    {
+        number = number - 1;
+    }else {
+        number = 0;
+    }
 
 
     return (
@@ -52,7 +60,7 @@ const Main = ({number, data}) => {
             </header>
 
             <div className="main_grid_container">
-                {data_map}
+                {data_map.length ? data_map : <NotFound />}
             </div>
         </MainElement>
     )

@@ -67,7 +67,7 @@ const onLocationFocused = (event) => {
   location_container.classList.remove('visibility_hidden');
 }
 
-const MainContainer = ({guests, handleInput}) => {
+const MainContainer = ({guests, handleInput, handleSearch}) => {
   return (
     <div className='edit_search_main'>
       <div className="edit_search_main_inputs">
@@ -77,7 +77,7 @@ const MainContainer = ({guests, handleInput}) => {
             type="text" 
             autoFocus className='location_input' 
             id="location_input" 
-            defaultValue={"Helsinki, Finland"} 
+            placeholder="Select or Enter Location"
             autoComplete="city"
             onFocus={onLocationFocused}
             onChange={handleInput}
@@ -101,7 +101,9 @@ const MainContainer = ({guests, handleInput}) => {
 
 
       <div className="edit_search_btn">
-        <SearchButton>
+        <SearchButton
+          onClick={handleSearch}
+        >
           <MdSearch className='edit_search_btn_icon'/>
           <span>Search</span>
         </SearchButton>

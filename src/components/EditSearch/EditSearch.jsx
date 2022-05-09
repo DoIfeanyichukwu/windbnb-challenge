@@ -49,7 +49,7 @@ const CLOSE = styled.button`
 
 
 
-const EditSearch = ({handleClose, handleGuestAdd, handleGuestSubtract, guestNo, handleInputChange, handleLocationButtonClick}) => {
+const EditSearch = ({handleClose, handleGuestAdd, handleGuestSubtract, guestNo, handleInputChange, handleLocationButtonClick, handleSearch, adults, children}) => {
   return (
     <Container className='edit_search_container'>
 
@@ -63,7 +63,7 @@ const EditSearch = ({handleClose, handleGuestAdd, handleGuestSubtract, guestNo, 
                 </CLOSE>
             </div>
 
-            <MainContainer guests={guestNo} handleInput={handleInputChange}/>
+            <MainContainer guests={guestNo} handleSearch={handleSearch} handleInput={handleInputChange}/>
 
             <div className="edit_search_aside">
                     <LocationContainer>
@@ -88,6 +88,8 @@ const EditSearch = ({handleClose, handleGuestAdd, handleGuestSubtract, guestNo, 
                     <GuestContainer
                         handleGuestAdd={handleGuestAdd}
                         handleGuestSubtract={handleGuestSubtract} 
+                        adults={adults}
+                        children={children}
                     />
             </div>
         </EditSearchComponent>

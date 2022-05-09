@@ -1,5 +1,5 @@
 import React from 'react'
-import { MdSearch } from 'react-icons/md'
+import { MdSearch, MdRoom } from 'react-icons/md'
 import styled from 'styled-components'
 
 const Button = styled.button`
@@ -24,13 +24,16 @@ const SPAN = styled.span`
     }
     & > .no_added_guest {
         color: #bdbdbd;
+        display: flex;
+        align-items: center;
+        gap: .4rem;
     }
 
     
 `
 
 
-const HeaderButton = ({place, guest, handleSearchBtn}) => {
+const HeaderButton = ({location, guests, handleSearchBtn}) => {
   return (
       <div className="header_button_container">
           <Button
@@ -38,10 +41,12 @@ const HeaderButton = ({place, guest, handleSearchBtn}) => {
             className="header_button" 
             aria-label='search toggle button'>
               <SPAN className="header_button_span place">
-                  {place}
+                  {
+                      location == ' '  ? <span className='no_added_guest'><MdRoom/> Place</span> : location
+                  }
               </SPAN>
               <SPAN className="header_button_span guest">
-                  {guest ? guest : <span className='no_added_guest'>Add guests</span>}
+                  {guests ? `${guests} ${guests>1 ? 'guests': 'guest'}` : <span className='no_added_guest'>Add guests</span>}
               </SPAN>
               <SPAN className="header_button_span search_icon">
                     <MdSearch className='header_button_icon'/>

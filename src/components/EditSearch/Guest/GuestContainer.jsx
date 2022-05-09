@@ -4,16 +4,16 @@ import styled from 'styled-components'
 
 const INPUT = styled.input`
     border: none;
-    padding-inline-start: 1rem;
     font-family: "Mulish", sans-serif;
     font-weight: 700;
     font-size: 14px;
     line-height: 17.57px;
     color: #333333;
     width: 40px;
+    text-align: center;
 `
 
-const GuestContainer = ({handleGuestAdd, handleGuestSubtract}) => {
+const GuestContainer = ({handleGuestAdd, handleGuestSubtract, adults, children}) => {
   return (
     <div className='guest_container visibility_hidden' id='guest_container'>
         <div className="guest_section">
@@ -32,7 +32,7 @@ const GuestContainer = ({handleGuestAdd, handleGuestSubtract}) => {
                     aria-label='minus guest by 1'
                 >
                 </GuestBtn>
-                <INPUT type="number" name="adults" defaultValue={0} disabled id="adults" />
+                <INPUT type="number" name="adults" disabled id="adults" value={adults} />
                 <GuestBtn 
                     className='plus'
                     onClick={handleGuestAdd}
@@ -57,7 +57,7 @@ const GuestContainer = ({handleGuestAdd, handleGuestSubtract}) => {
                     onClick={handleGuestSubtract}
                     aria-label='minus guest by 1'>
                 </GuestBtn>
-                <INPUT type="number" name="children" disabled defaultValue={0} id="children" />
+                <INPUT type="number" name="children" disabled id="children" value={children} />
                 <GuestBtn 
                     className='plus'
                     onClick={handleGuestAdd}
