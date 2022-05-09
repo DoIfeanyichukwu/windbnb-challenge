@@ -63,8 +63,9 @@ a {
   width: 12px;
   height: 12px;
 }
-.location_icon {
 
+button.minus {
+  background-image: url(./img/minus.svg);
 }
 .close_icon {
   width: 24px;

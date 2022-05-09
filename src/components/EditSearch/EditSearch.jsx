@@ -49,7 +49,7 @@ const CLOSE = styled.button`
 
 
 
-const EditSearch = (props) => {
+const EditSearch = ({handleClose, handleGuestAdd, handleGuestSubtract, guestNo, handleInputChange, handleLocationButtonClick}) => {
   return (
     <Container className='edit_search_container'>
 
@@ -57,22 +57,38 @@ const EditSearch = (props) => {
             <div className="edit_search_pseudo_nav">
                 <P>Edit your search</P>
                 <CLOSE 
-                aria-label='close button for small screens'> 
+                    onClick={handleClose}
+                    aria-label='close button for small screens'> 
                     <MdClear className='close_icon'/>
                 </CLOSE>
             </div>
 
-            <MainContainer />
+            <MainContainer guests={guestNo} handleInput={handleInputChange}/>
 
             <div className="edit_search_aside">
                     <LocationContainer>
-                        <Location city={"Helsinki, Finland"} />
-                        <Location city={"Turku, Finland"} />
-                        <Location city={"Oulu, Finland"} />
-                        <Location city={"Vaasa, Finland"} />
+                        <Location 
+                            city={"Helsinki, Finland"} 
+                            handleClick={handleLocationButtonClick} 
+                        />
+                        <Location 
+                            handleClick={handleLocationButtonClick}
+                            city={"Turku, Finland"} 
+                        />
+                        <Location 
+                            handleClick={handleLocationButtonClick}
+                            city={"Oulu, Finland"} 
+                        />
+                        <Location 
+                            handleClick={handleLocationButtonClick}
+                            city={"Vaasa, Finland"} 
+                        />
                     </LocationContainer>
 
-                    <GuestContainer />
+                    <GuestContainer
+                        handleGuestAdd={handleGuestAdd}
+                        handleGuestSubtract={handleGuestSubtract} 
+                    />
             </div>
         </EditSearchComponent>
     </Container>

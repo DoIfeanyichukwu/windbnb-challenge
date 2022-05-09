@@ -67,19 +67,20 @@ const onLocationFocused = (event) => {
   location_container.classList.remove('visibility_hidden');
 }
 
-const MainContainer = (props) => {
+const MainContainer = ({guests, handleInput}) => {
   return (
     <div className='edit_search_main'>
       <div className="edit_search_main_inputs">
         <div className="edit_search_main_location edit_search_sub">
           <LABEL htmlFor="location_input">location</LABEL>
-          <INPUT 
+          <INPUT
             type="text" 
             autoFocus className='location_input' 
             id="location_input" 
             defaultValue={"Helsinki, Finland"} 
             autoComplete="city"
             onFocus={onLocationFocused}
+            onChange={handleInput}
           />
         </div>
 
@@ -91,6 +92,8 @@ const MainContainer = (props) => {
             id='guests_input' 
             placeholder='Add guests' 
             onFocus={onGuestFocused}
+            readOnly
+            value={`${guests ? guests: 'Add'} ${guests > 1 ? 'guests': 'guest'}`}
           />
         </div>
 

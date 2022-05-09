@@ -13,7 +13,7 @@ const HeaderElement = styled.header`
   margin-block: 19px 37px;
 `
 
-const Header = (props) => {
+const Header = ({handleSearchBtn}) => {
   return (
     <HeaderElement className="header">
       <div className='logo_container'>
@@ -22,7 +22,11 @@ const Header = (props) => {
         </a>
       </div>
 
-      <HeaderButton place={"Helsinki, Finland"} guest={0} />
+      <HeaderButton 
+        place={"Helsinki, Finland"} 
+        guest={0}  
+        handleSearchBtn={handleSearchBtn}
+      />
     </HeaderElement>
   )
 }

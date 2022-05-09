@@ -29,16 +29,12 @@ const SPAN = styled.span`
     
 `
 
-const handleHeaderButtonClick = (e) => {
-    e.preventDefault();
-    document.querySelector('.edit_search_container').classList.add('edit_search_block');
-}
 
-const HeaderButton = ({place, guest}) => {
+const HeaderButton = ({place, guest, handleSearchBtn}) => {
   return (
       <div className="header_button_container">
           <Button
-            onClick={handleHeaderButtonClick}
+            onClick={handleSearchBtn}
             className="header_button" 
             aria-label='search toggle button'>
               <SPAN className="header_button_span place">

@@ -3,13 +3,20 @@ import { MdRoom } from 'react-icons/md'
 import styled from 'styled-components'
 
 const LI = styled.li`
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    line-height: 17.57px;
+`
+
+const Button = styled.button`
+    display: block;
+    background: transparent;
+    border: none;
     display: flex;
     gap: 10px;
     align-items: center;
-    font-family: "Mulish", sans-serif;
     color: #4f4f4f;
-    font-weight: 400;
-    line-height: 17.57px;
+    cursor: pointer;
 
     & .location_icon {
         color: inherit;
@@ -18,10 +25,16 @@ const LI = styled.li`
     }
 `
 
-const Location = ({city}) => {
+
+
+const Location = ({city, handleClick}) => {
   return (
       <LI className="location_item">
-          <MdRoom className='location_icon'/> {city}
+          <Button
+            onClick={handleClick}
+          >
+              <MdRoom className='location_icon'/> {city}    
+          </Button>
       </LI>
   )
 }

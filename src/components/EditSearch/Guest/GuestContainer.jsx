@@ -1,6 +1,5 @@
 import React from 'react'
 import { GuestType, GuestDesc, GuestBtn, GuestForm } from './guestUtil'
-import { MdAdd, MdRemove } from 'react-icons/md'
 import styled from 'styled-components'
 
 const INPUT = styled.input`
@@ -14,7 +13,7 @@ const INPUT = styled.input`
     width: 40px;
 `
 
-const GuestContainer = (props) => {
+const GuestContainer = ({handleGuestAdd, handleGuestSubtract}) => {
   return (
     <div className='guest_container visibility_hidden' id='guest_container'>
         <div className="guest_section">
@@ -27,9 +26,19 @@ const GuestContainer = (props) => {
                 </GuestDesc>
             </label>
             <GuestForm>
-                <GuestBtn aria-label='minus guest by 1'><MdRemove className='sign_icon'/></GuestBtn>
+                <GuestBtn
+                    className='minus'
+                    onClick={handleGuestSubtract}
+                    aria-label='minus guest by 1'
+                >
+                </GuestBtn>
                 <INPUT type="number" name="adults" defaultValue={0} disabled id="adults" />
-                <GuestBtn aria-label='add one guest'><MdAdd className='sign_icon'/></GuestBtn>
+                <GuestBtn 
+                    className='plus'
+                    onClick={handleGuestAdd}
+                    aria-label='add one guest'
+                >
+                </GuestBtn>
             </GuestForm>
         </div>
 
@@ -43,9 +52,18 @@ const GuestContainer = (props) => {
                 </GuestDesc>
             </label>
             <GuestForm>
-                <GuestBtn  aria-label='minus guest by 1'><MdRemove className='sign_icon'/></GuestBtn>
+                <GuestBtn  
+                    className='minus'
+                    onClick={handleGuestSubtract}
+                    aria-label='minus guest by 1'>
+                </GuestBtn>
                 <INPUT type="number" name="children" disabled defaultValue={0} id="children" />
-                <GuestBtn aria-label='add one guest'><MdAdd className='sign_icon'/></GuestBtn>
+                <GuestBtn 
+                    className='plus'
+                    onClick={handleGuestAdd}
+                    aria-label='add one guest'
+                >
+                </GuestBtn>
             </GuestForm>
         </div>
     </div>

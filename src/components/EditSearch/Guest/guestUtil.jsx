@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import plus from '../../../img/plus.svg';
+import minus from '../../../img/minus.svg';
 
 const GuestType = styled.span`
     font-family: "Mulish", sans-serif;
@@ -28,8 +30,23 @@ const GuestBtn = styled.button`
     padding-block: 7.33px;
     padding-inline: 6.33px;
     cursor: pointer;
-    // width: 23px;
-    // height: 23px;
+    width: 23px;
+    height: 23px;
+
+    &.minus {
+        background-image: url(${minus});
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 90%;
+    }
+
+    &.plus {
+        background-image: url(${plus});
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 90%;
+    }
+
 `
 
 const GuestForm = styled.div`
