@@ -42,7 +42,7 @@ const HeaderButton = ({location, guests, handleSearchBtn}) => {
             aria-label='search toggle button'>
               <SPAN className="header_button_span place">
                   {
-                      location == ' '  ? <span className='no_added_guest'><MdRoom/> Place</span> : location
+                      location == ' ' || location == ''  ? <span className='no_added_guest'><MdRoom/> Place</span> : location
                   }
               </SPAN>
               <SPAN className="header_button_span guest">
